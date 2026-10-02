@@ -1,0 +1,33 @@
+let osoby:string[] = ['Krzysztof karnowski', 'Marian', "Adam", "Ewa"];
+
+console.log(osoby)
+
+osoby.push("Anita");
+
+
+console.log(osoby)
+
+osoby.pop();
+
+
+console.log(osoby)
+
+osoby.shift();
+
+
+console.log(osoby)
+
+osoby.unshift("Allicja")
+
+
+console.log(osoby)
+
+osoby.splice(1,1, "Grześ");
+
+
+console.log(osoby)
+
+let druga = osoby.slice(1,3);
+
+
+console.log(druga)
