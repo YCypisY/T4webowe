@@ -8,6 +8,25 @@
   <!-- string interpolejszyn-->
   <img src="{{obrazek}}" alt="obrazek" width="200">
 
+  <!-- property interpolejszyn-->
   <img [src] = "obrazek2" width="200">
+
+  <h1>Jestem {{osoba.imie}} {{osoba.nazwisko}}</h1>
+
+  <p>Podaj imię:</p>
+  <input type="text" [(ngModel)]="osoba.imie">
+  <p>podaj nazwisko: </p>
+  <input type="text" [(ngModel)]="osoba.nazwisko">
+  <p>Podaj nazwe pliku:</p>
+  <input type="text" [(ngModel)]="osoba.zdjecie">
+  <img src = "{{osoba.zdjecie}}" width="20" alt="">
+
+  <button class="btn btn-success" (click)="pokazujZdjecia()">Pokazywanie zdjecia</button>
+  <p>{{pokazywaniezdjecia}}</p>
+
+  <div *ngIf="pokazywaniezdjecia">
+    <img src="{{ osoba.zdjecie}}" width="120" alt="">
+  </div>
+
 
 </div>
