@@ -1,0 +1,19 @@
+<div>
+  <h1>Profil użytkownika: {{ imieNazwisko }}</h1>
+
+  <img [src]="avatarUrl" width="200">
+  <br>
+
+  <span>Zmień imię i nazwisko: </span>
+
+  <input type="text" [(ngModel)]="imieNazwisko">
+
+  <p>Polubienia: {{ polubienia }}</p>
+
+  <button (click)="dodawanie()">👍 Polub profil</button>
+
+  <div *ngIf="pokazywanieReset" style="display: inline-block;">
+      <button (click)="reset()" >Resetuj</button>
+  </div>
+  
+</div>
