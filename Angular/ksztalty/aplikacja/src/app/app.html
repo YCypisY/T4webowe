@@ -1,0 +1,27 @@
+<div style="text-align: center;">
+  <div style="margin: 0 auto; margin: 20px;">
+    <button (click)="zmien()">
+      Zmień
+    </button>
+    <input type="radio" name="grupa" [value]="1" [(ngModel)]="wybrany">
+    <input type="radio" name="grupa" [value]="2" [(ngModel)]="wybrany">
+  </div>
+  <div style="margin: 20px">
+    <button (click)="sprawdz()">
+      Sprawdz
+    </button>
+    <input type="text" [(ngModel)]="tekst">
+    <p>{{ wynik }}</p>
+
+  </div>
+
+  <div style="margin: 20px;">
+    <button>
+      kolor
+    </button>
+    <div style="display: inline-block; width: 20px; height: 20px; border: solid 1px black;" [style.background-color] = "kolor">
+
+    </div>
+  </div>
+
+</div>
