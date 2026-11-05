@@ -1,0 +1,27 @@
+<div class="container mt-5">
+
+  <h1 class="text-center mb-5">
+    Przychodnia lekarska
+  </h1>
+
+  <div class="row">
+
+    <div class="col-md-5 mb-4">
+
+      <app-rejerstrowanie (dodajPacjenta)="dodajDokolejki($event)">
+
+      </app-rejerstrowanie>
+
+    </div>
+
+    <div class="col-md-7 mb-4">
+
+      <app-kolejka
+        [pacjenci]="pacjenci">
+      </app-kolejka>
+
+    </div>
+
+  </div>
+
+</div>

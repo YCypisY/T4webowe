@@ -1,0 +1,63 @@
+<div class="card shadow p-4">
+
+  <h3 class="text-center mb-4">Rejestracja pacjenta</h3>
+
+  <form (ngSubmit)="zarejestruj()">
+
+    <div class="mb-3">
+      <label class="form-label">Imię</label>
+      <input
+        type="text"
+        class="form-control"
+        name="imie"
+        [(ngModel)]="imie"
+        required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Nazwisko</label>
+      <input
+        type="text"
+        class="form-control"
+        name="nazwisko"
+        [(ngModel)]="nazwisko"
+        required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">PESEL</label>
+      <input
+        type="text"
+        class="form-control"
+        name="pesel"
+        [(ngModel)]="pesel"
+        maxlength="11"
+        required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Rodzaj lekarza</label>
+
+      <select
+        class="form-select"
+        name="lekarz"
+        [(ngModel)]="lekarz"
+        required>
+
+        <option value="" disabled>Wybierz lekarza</option>
+        <option value="Internista">Internista</option>
+        <option value="Kardiolog">Kardiolog</option>
+        <option value="Dermatolog">Dermatolog</option>
+        <option value="Pediatra">Pediatra</option>
+        <option value="Neurolog">Neurolog</option>
+
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary w-100">
+      Zarejestruj pacjenta
+    </button>
+
+  </form>
+
+</div>

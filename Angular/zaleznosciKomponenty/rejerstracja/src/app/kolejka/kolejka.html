@@ -1,0 +1,33 @@
+<div class="card shadow p-4">
+
+  <h3 class="text-center mb-4">Kolejka pacjentów</h3>
+
+  <p *ngIf="pacjenci.length === 0" class="text-center text-muted">
+    Brak pacjentów w kolejce.
+  </p>
+
+  <table class="table table-striped table-hover">
+
+    <thead class="table-dark">
+      <tr>
+        <th>Nr</th>
+        <th>Imię</th>
+        <th>Nazwisko</th>
+        <th>PESEL</th>
+        <th>Lekarz</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let pacjent of pacjenci; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ pacjent.imie }}</td>
+        <td>{{ pacjent.nazwisko }}</td>
+        <td>{{ pacjent.pesel }}</td>
+        <td>{{ pacjent.lekarz }}</td>
+      </tr>
+    </tbody>
+
+  </table>
+
+</div>
