@@ -1,0 +1,23 @@
+<div>
+    <label for="num1">Podaj pierwsza liczbe:</label>
+    <input id="num1" type="number" [(ngModel)="liczba1"]>
+
+    <label for="num2">Podaj druga liczbe:</label>
+    <input id="num2" type="number" [(ngModel)="liczba2"]>
+
+</div>
+<button (click)="oblicz()">Oblicz</button>
+
+<div *ngIf="errorMessage">
+    <p>{{errorMessage}}</p>
+</div>
+
+<div *ngIf="wynik">
+    <ol>
+        <li>Suma: {{wynik.suma}}</li>
+        <li>Roznica: {{wynik.roznica}}</li>
+        <li>Iloczyn: {{wynik.iloczyn}}</li>
+        <li>Iloraz: {{wynik.iloraz}}</li>
+    </ol>
+
+</div>
